@@ -54,9 +54,9 @@ class AdminPanelProvider extends PanelProvider
                 DispatchServingFilamentEvent::class,
             ])
             //->plugin(FilamentSpatieRolesPermissionsPlugin::make())
-            ->plugin(
+            ->plugins([
                 \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make()
-            )
+            ])
             ->authMiddleware([
                 Authenticate::class,
             ])->favicon(asset('img/logo.png'));
